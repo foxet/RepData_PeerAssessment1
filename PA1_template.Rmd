@@ -29,6 +29,8 @@ g<-ggplot(actSum,aes(x=sumStep))+
 suppressMessages(print(g))
 meanValue<-mean(actSum$sumStep)
 medianValue<-median(actSum$sumStep)
+meanValue
+medianValue
 ```
 The mean and median of the total number of steps taken per day is `r meanValue` and `r medianValue` respectively. 
 
@@ -51,7 +53,7 @@ whichInterval<-actDay$interval[which.max(actDay$averageStep)]
 naRow<-nrow(actWithNA)-sum(complete.cases(actWithNA))
 ```
 `r naRow` rows with NA in the dataset
-
+Imputing missing value by the mean value of the same interval as follow:
 ```{r}
 imputedact<-merge(actWithNA,actDay,by='interval')
 naId<-is.na(imputedact$steps)
@@ -64,6 +66,8 @@ imputedg<-ggplot(imputedactSum,aes(x=sumStep))+
 suppressMessages(print(imputedg))
 imputedmeanValue<-mean(imputedactSum$sumStep)
 imputedmedianValue<-median(imputedactSum$sumStep)
+imputedmeanValue
+imputedmedianValue
 ```
  
 After imputing missing value by the mean value of the same interval. The mean and median of the total number of steps taken per day is `r imputedmeanValue` and `r imputedmedianValue` respectively. They seem very close to the estimates calculating from the dataset without imputation. These two figures shows the imputing missing data doesn't change the distribution.
