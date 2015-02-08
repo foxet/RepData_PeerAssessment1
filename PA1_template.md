@@ -52,7 +52,7 @@ medianValue
 ```
 ## [1] 10765
 ```
-The mean and median of the total number of steps taken per day is 1.0766189\times 10^{4} and 1.0765\times 10^{4} respectively. 
+The mean and median of the total number of steps taken per day is 10766.19 and 10765 respectively. 
 
 ## What is the average daily activity pattern?
 
@@ -113,7 +113,7 @@ imputedmedianValue
 ## [1] 10766.19
 ```
  
-After imputing missing value by the mean value of the same interval. The mean and median of the total number of steps taken per day is 1.0766189\times 10^{4} and 1.0766189\times 10^{4} respectively. They seem very close to the estimates calculating from the dataset without imputation. These two figures shows the imputing missing data doesn't change the distribution.
+After imputing missing value by the mean value of the same interval. The mean and median of the total number of steps taken per day is 10766.19 and 10766.19 respectively. They seem very close to the estimates calculating from the dataset without imputation. These two figures shows the imputing missing data doesn't change the distribution.
 
 ## Are there differences in activity patterns between weekdays and weekends?
 

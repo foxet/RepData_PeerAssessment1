@@ -32,7 +32,7 @@ medianValue<-median(actSum$sumStep)
 meanValue
 medianValue
 ```
-The mean and median of the total number of steps taken per day is `r meanValue` and `r medianValue` respectively. 
+The mean and median of the total number of steps taken per day is `r as.character(round(meanValue,2))` and `r as.character(medianValue)` respectively. 
 
 ## What is the average daily activity pattern?
 
@@ -70,7 +70,7 @@ imputedmeanValue
 imputedmedianValue
 ```
  
-After imputing missing value by the mean value of the same interval. The mean and median of the total number of steps taken per day is `r imputedmeanValue` and `r imputedmedianValue` respectively. They seem very close to the estimates calculating from the dataset without imputation. These two figures shows the imputing missing data doesn't change the distribution.
+After imputing missing value by the mean value of the same interval. The mean and median of the total number of steps taken per day is `r as.character(round(imputedmeanValue,2))` and `r as.character(round(imputedmedianValue,2))` respectively. They seem very close to the estimates calculating from the dataset without imputation. These two figures shows the imputing missing data doesn't change the distribution.
 
 ## Are there differences in activity patterns between weekdays and weekends?
 ```{r}
